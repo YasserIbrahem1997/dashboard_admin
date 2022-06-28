@@ -1,5 +1,7 @@
 import 'package:admin/responsive.dart';
+import 'package:admin/viwe/dashboard/components/AddManager.dart';
 import 'package:admin/viwe/dashboard/components/my_fields.dart';
+import 'package:admin/viwe/dashboard/components/top.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -27,7 +29,9 @@ class DashboardScreen extends StatelessWidget {
                     children: [
                       MyFiles(),
                       SizedBox(height: defaultPadding),
-                      RecentFiles(),
+                      TopWidget(),
+                      SizedBox(height: defaultPadding),
+                      AddManager(),
                       if (Responsive.isMobile(context))
                         SizedBox(height: defaultPadding),
                       if (Responsive.isMobile(context)) StarageDetails(),
