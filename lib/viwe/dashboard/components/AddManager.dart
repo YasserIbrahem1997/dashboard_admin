@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
+
 class AddManager extends StatelessWidget {
   bool isChecked = false;
 
@@ -9,11 +11,11 @@ class AddManager extends StatelessWidget {
     return Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-            color: Colors.white,
+            color:secondaryColor,
             borderRadius: const BorderRadius.all(
               Radius.circular(20),
             ),
-            boxShadow: [BoxShadow(blurRadius: 3, color: Colors.grey)]),
+        ),
         child: Column(
           children: [
 
@@ -22,8 +24,8 @@ class AddManager extends StatelessWidget {
                 Text(
                   'Add SubAdmin',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+
+                      color: bgColorDashbord,
                       fontSize: 20),
                 ),
                 SizedBox(
@@ -45,8 +47,7 @@ class AddManager extends StatelessWidget {
                         margin:EdgeInsets.symmetric(horizontal: 20,vertical: 10) ,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(18),
-                          boxShadow:[BoxShadow(blurRadius: 3, color: Colors.grey)] ,
-                          color: Colors.white,
+                          color: primaryColor,
                         ),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 30),
@@ -56,11 +57,11 @@ class AddManager extends StatelessWidget {
                               Row(
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor: Colors.grey,
-                                    radius: 40,
+                                    backgroundColor:secondaryColor,
+                                    radius: 25,
                                     child: Icon(
                                       Icons.person,
-                                      size: 40,
+                                      size: 20,
                                       color: Colors.white,
                                     ),
                                   ),
@@ -70,8 +71,8 @@ class AddManager extends StatelessWidget {
                                   Text(
                                     'Kamal magdy kamal',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blueGrey,
+
+                                        color: bgColorDashbord,
                                         fontSize: 17),
                                   ),
                                 ],
@@ -81,11 +82,13 @@ class AddManager extends StatelessWidget {
 
                                   GestureDetector(
                                     child: CircleAvatar(
+
                                       child: Icon(
                                         Icons.close,
                                         color: Colors.white,
                                       ),
                                       backgroundColor: Colors.red,
+                                      radius: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -93,9 +96,12 @@ class AddManager extends StatelessWidget {
                                   ),
                                   GestureDetector(
                                     child: CircleAvatar(
+                                      radius: 16,
+
                                       child: Icon(
                                         Icons.check,
                                         color: Colors.white,
+                                        size: 20,
                                       ),
                                       backgroundColor: Colors.green,
                                     ),

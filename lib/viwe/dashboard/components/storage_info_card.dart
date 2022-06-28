@@ -21,18 +21,26 @@ class StorageInfoCard extends StatelessWidget {
       margin: EdgeInsets.only(top: defaultPadding),
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: primaryColor.withOpacity(0.15)),
+        color: primaryColor,
         borderRadius: const BorderRadius.all(
           Radius.circular(defaultPadding),
         ),
       ),
       child: Row(
         children: [
-          SizedBox(
-            height: 20,
-            width: 20,
-            child: SvgPicture.asset(svgSrc),
-          ),
+           Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                color:secondaryColor,
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SvgPicture.asset(svgSrc,color: Colors.white,),
+              ),
+            ),
+
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
@@ -43,19 +51,24 @@ class StorageInfoCard extends StatelessWidget {
                     title,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: bgColorDashbord
+                    ),
                   ),
                   Text(
                     "$numOfFiles Files",
                     style: Theme.of(context)
                         .textTheme
                         .caption!
-                        .copyWith(color: Colors.white70),
+                        .copyWith(color: bgColorDashbord),
                   ),
                 ],
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(amountOfFiles , style: TextStyle(
+            color: bgColorDashbord
+          ),)
         ],
       ),
     );

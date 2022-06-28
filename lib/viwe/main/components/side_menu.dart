@@ -1,3 +1,4 @@
+import 'package:admin/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -9,11 +10,12 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: bgColor,
       child: ListView(
         children: [
           DrawerHeader(
             child: Text("Design By Yasser",style: TextStyle(
-              fontSize: 15,color: Colors.white
+              fontSize: 15,color: bgColorDashbord
             ),),
           ),
           DrawerListTile(
@@ -81,12 +83,12 @@ class DrawerListTile extends StatelessWidget {
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
-        color: Colors.white54,
+        color: bgColorDashbord,
         height: 16,
       ),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white54),
+        style: TextStyle(color: bgColorDashbord,),
       ),
     );
   }

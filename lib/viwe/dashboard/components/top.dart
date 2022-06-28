@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:timelines/timelines.dart';
 
+import '../../../constants.dart';
+
 class TopWidget extends StatelessWidget {
   const TopWidget({Key? key}) : super(key: key);
 
@@ -17,23 +19,14 @@ class TopWidget extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey[200]!,
-                      spreadRadius: 2,
-                      blurRadius: 3,
-                      offset:
-                          const Offset(1, 1.5), // changes position of shadow
-                    )
-                  ],
+                  color: secondaryColor,
                 ),
                 child: Column(
                   children: [
                     Text(
                       'Top Student',
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.black),
+                          TextStyle(fontSize: 18,color: bgColorDashbord),
                     ),
                     SizedBox(height: 10,),
 
@@ -54,13 +47,14 @@ class TopWidget extends StatelessWidget {
                                     radius:20,
                                     child: Container(
                                       width: 30,
-                                      height: 30,
+                                      height: 50,
                                       decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(18),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/images/man.webp'
+                                              'assets/images/man.webp',
+
                                           ),
                                           fit: BoxFit.cover,
                                         ),
@@ -92,21 +86,14 @@ class TopWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey[200]!,
-                    spreadRadius: 2,
-                    blurRadius: 3,
-                    offset: const Offset(1, 1.5), // changes position of shadow
-                  )
-                ],
+                color: secondaryColor,
+
               ),
               child: Column(
                 children: [
                   Text(
                     'Top Author',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.black),
+                    style: TextStyle(fontSize: 18,color: bgColorDashbord),
                   ),
                   SizedBox(height: 10,),
                   Expanded(child: Row(

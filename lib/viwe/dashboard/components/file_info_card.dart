@@ -17,6 +17,8 @@ class FileInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+     width: 50,
+      height: 50,
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
         color: color,

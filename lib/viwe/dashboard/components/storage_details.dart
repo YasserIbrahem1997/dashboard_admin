@@ -24,11 +24,12 @@ class StarageDetails extends StatelessWidget {
             "Storage Details",
             style: TextStyle(
               fontSize: 18,
-              fontWeight: FontWeight.w500,
+
+              color: bgColorDashbord,
             ),
           ),
           SizedBox(height: defaultPadding),
-          Chart(),
+          BarChartSample2(),
           StorageInfoCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "Documents Files",

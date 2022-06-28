@@ -24,16 +24,16 @@ class Header extends StatelessWidget {
           Text(
             "Dashboard",
             style: TextStyle(
-              color: primaryColor,
+              color: bgColorDashbord,
               fontSize: 20,
-              fontWeight: FontWeight.bold,
-
             )
           ),
+
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        Expanded(child: SearchField()),
-        ProfileCard()
+        SizedBox(height: 80,),
+        // Expanded(child: SearchField()),
+        // ProfileCard()
       ],
     );
   }
